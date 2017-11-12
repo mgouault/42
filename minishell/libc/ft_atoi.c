@@ -6,7 +6,7 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:02:26 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/14 15:13:02 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:33:56 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int		ft_atoi(char *str)
 {
-	static char *whitespace[6] = { ' ', '\f', '\r', '\v', '\n', '\t' };
-	int i;
-	int res;
-	int sign;
+	static char	whitespace[7] = " \f\r\v\n\t";
+	int			i;
+	int			res;
+	int			sign;
 
 	i = 0;
 	while (str[i] && char_in_str(whitespace, str[i]))
