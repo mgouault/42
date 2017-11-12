@@ -12,7 +12,9 @@
 
 `ft_select: Introduction to termcaps - In-term graphical interface selection`
 
-`ft_sh1: Shell lite remake`
+`minishell: Shell lite`
+
+`21sh: minishell with pipes and stuff`
 
 `get_next_line: getline-like C function`
 
