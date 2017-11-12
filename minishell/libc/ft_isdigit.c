@@ -6,7 +6,7 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:03:40 by mgouault          #+#    #+#             */
-/*   Updated: 2015/03/17 13:40:34 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:40:47 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 t_bool	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (TRUE);
-	return (FALSE);
+	return (c >= '0' && c <= '9');
 }

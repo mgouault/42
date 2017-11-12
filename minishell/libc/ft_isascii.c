@@ -6,7 +6,7 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:03:34 by mgouault          #+#    #+#             */
-/*   Updated: 2015/03/17 13:40:11 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:40:30 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 t_bool	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (TRUE);
-	return (FALSE);
+	return (c >= 0 && c <= 127);
 }
