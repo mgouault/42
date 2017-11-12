@@ -49,6 +49,10 @@ char		*ft_strsub(char *s, unsigned int start, size_t len);
 char		*ft_strtrim(char *s);
 char		*ft_strreplace(char *str, char *occ, char *replace);
 /*
+** CHAR
+*/
+int			char_to_digit(char c);
+/*
 ** INT
 */
 char		*ft_itoa(int n);
@@ -69,6 +73,8 @@ t_bool		ft_isprint(int c);
 t_bool		ft_strmatch(char *str, char *match);
 t_bool		ft_strequ(char *s1, char *s2);
 t_bool		ft_strnequ(char *s1, char *s2, size_t n);
+t_bool		char_in_str(char *str, char c);
+t_bool		str_in_array(char **array, char *str);
 int			ft_strcmp(char *s1, char *s2);
 int			ft_strncmp(char *s1, char *s2, size_t n);
 /*
