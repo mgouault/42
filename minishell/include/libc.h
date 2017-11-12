@@ -6,7 +6,7 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 20:01:27 by mgouault          #+#    #+#             */
-/*   Updated: 2015/03/17 20:39:34 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:36:22 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char		*ft_strreplace(char *str, char *occ, char *replace);
 /*
 ** CHAR
 */
-int			char_to_digit(char c);
+int			ft_char_to_digit(char c);
 /*
 ** INT
 */
@@ -73,8 +73,8 @@ t_bool		ft_isprint(int c);
 t_bool		ft_strmatch(char *str, char *match);
 t_bool		ft_strequ(char *s1, char *s2);
 t_bool		ft_strnequ(char *s1, char *s2, size_t n);
-t_bool		char_in_str(char *str, char c);
-t_bool		str_in_array(char **array, char *str);
+t_bool		ft_char_in_str(char *str, char c);
+t_bool		ft_str_in_array(char **array, char *str);
 int			ft_strcmp(char *s1, char *s2);
 int			ft_strncmp(char *s1, char *s2, size_t n);
 /*

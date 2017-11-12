@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_in_array.c                                     :+:      :+:    :+:   */
+/*   char_in_str.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/12 19:28:59 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/12 19:29:14 by mgouault         ###   ########.fr       */
+/*   Created: 2017/11/12 19:28:57 by mgouault          #+#    #+#             */
+/*   Updated: 2017/11/12 19:36:05 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-t_bool	str_in_array(char **array, char *str)
+t_bool	ft_char_in_str(char *str, char c)
 {
 	int	i;
 
 	i = 0;
-	while (array[i])
+	while (str[i])
 	{
-		if (ft_strequ(array[i], str))
+		if (str[i] == c)
 			return (TRUE);
 		i++;
 	}

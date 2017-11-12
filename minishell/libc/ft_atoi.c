@@ -6,7 +6,7 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:02:26 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/12 19:33:56 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:36:02 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_atoi(char *str)
 	int			sign;
 
 	i = 0;
-	while (str[i] && char_in_str(whitespace, str[i]))
+	while (str[i] && ft_char_in_str(whitespace, str[i]))
 		++i;
 	sign = 1;
 	if (str[i] == '-')
@@ -31,7 +31,7 @@ int		ft_atoi(char *str)
 	while (str[i] && ft_isdigit(str[i]))
 	{
 		res *= 10;
-		res += char_to_digit(str[i]);
+		res += ft_char_to_digit(str[i]);
 		++i;
 	}
 	return (res * sign);
