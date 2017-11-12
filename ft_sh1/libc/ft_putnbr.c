@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{

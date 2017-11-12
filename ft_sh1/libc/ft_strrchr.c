@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-char *ft_strrchr(char *s, int c)
+char	*ft_strrchr(char *s, int c)
 {
 	char	*occ;
 	int		i;

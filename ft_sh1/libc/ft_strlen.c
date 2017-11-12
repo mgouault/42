@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-size_t ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	size_t i;
 

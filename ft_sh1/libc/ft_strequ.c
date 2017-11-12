@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-t_bool ft_strequ(char *s1, char *s2)
+t_bool	ft_strequ(char *s1, char *s2)
 {
 	int i;
 

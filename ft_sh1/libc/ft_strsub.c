@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-char *ft_strsub(char *s, unsigned int start, size_t len)
+char	*ft_strsub(char *s, unsigned int start, size_t len)
 {
 	char			*str;
 	unsigned int	i;

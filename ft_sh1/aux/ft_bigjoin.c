@@ -12,7 +12,7 @@
 
 #include <ft_minishell1.h>
 
-static void ft_fill_arg(char *input, int i, va_list ap, char **bigjoin)
+static void	ft_fill_arg(char *input, int i, va_list ap, char **bigjoin)
 {
 	char *tmp;
 	char *tmp2;

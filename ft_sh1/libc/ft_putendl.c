@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-void ft_putendl(char *s)
+void	ft_putendl(char *s)
 {
 	if (s)
 	{

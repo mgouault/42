@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-t_bool ft_strnequ(char *s1, char *s2, size_t n)
+t_bool	ft_strnequ(char *s1, char *s2, size_t n)
 {
 	int i;
 

@@ -12,7 +12,7 @@
 
 #include <ft_minishell1.h>
 
-static void ft_print_arg(char *input, int i, va_list ap)
+static void	ft_print_arg(char *input, int i, va_list ap)
 {
 	if (input[i + 1] == 's')
 		ft_putstr(va_arg(ap, char *));

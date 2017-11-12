@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-t_bool ft_isprint(int c)
+t_bool	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (TRUE);

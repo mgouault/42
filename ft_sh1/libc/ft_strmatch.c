@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-t_bool ft_strmatch(char *str, char *match)
+t_bool	ft_strmatch(char *str, char *match)
 {
 	(void)str;
 	(void)match;

@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-t_bool ft_isdigit(int c)
+t_bool	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (TRUE);

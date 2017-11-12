@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-char *ft_strreplace(char *str, char *occ, char *replace)
+char	*ft_strreplace(char *str, char *occ, char *replace)
 {
 	char	*s1;
 	char	*s2;

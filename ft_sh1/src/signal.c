@@ -12,7 +12,7 @@
 
 #include <ft_minishell1.h>
 
-void resize(int sig)
+void	resize(int sig)
 {
 	t_win	win;
 	short	i;
@@ -41,7 +41,7 @@ void resize(int sig)
 	(void)sig;
 }
 
-void catch_sigint(int sig)
+void	catch_sigint(int sig)
 {
 	(void)sig;
 }

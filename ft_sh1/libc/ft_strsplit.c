@@ -12,7 +12,7 @@
 
 #include <libc.h>
 
-char		**ft_strsplit(char *s, char c)
+char	**ft_strsplit(char *s, char c)
 {
 	char	**str;
 	int		i;
