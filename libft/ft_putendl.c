@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libc.h>
 
-void ft_putendl(char const *s)
+void	ft_putendl(char *s)
 {
 	if (s)
 	{

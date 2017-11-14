@@ -6,14 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:03:23 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:13 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:39:36 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+#include <libc.h>
+
+t_bool	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
-	(c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

@@ -6,13 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:03:40 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:15 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:40:47 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include <libc.h>
+
+t_bool	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }

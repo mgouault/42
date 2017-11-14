@@ -6,14 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:53:43 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:35 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/16 20:51:50 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*str;
 	int		i;
@@ -22,7 +21,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
+	str = (char *)ft_memalloc(sizeof(char) * \
+		(ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!str)
 		return (NULL);
 	while (s1[i])

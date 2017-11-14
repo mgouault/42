@@ -6,13 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:03:34 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:14 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:40:30 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include <libc.h>
+
+t_bool	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

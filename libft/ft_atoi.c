@@ -6,31 +6,32 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:02:26 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/14 15:13:02 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:36:02 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+#include <libc.h>
+
+int		ft_atoi(char *str)
 {
-	int i;
-	int res;
-	int sign;
+	static char	whitespace[7] = " \f\r\v\n\t";
+	int			i;
+	int			res;
+	int			sign;
 
 	i = 0;
+	while (str[i] && ft_char_in_str(whitespace, str[i]))
+		++i;
 	sign = 1;
-	res = 0;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\r' || str[i] == '\v'
-		|| str[i] == '\n' || str[i] == '\t')
-		++i;
+	if (str[i] == '-')
+		sign = -1;
 	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign = -1;
 		++i;
-	}
-	while ((str[i] >= '0' && str[i] <= '9') && str[i])
+	res = 0;
+	while (str[i] && ft_isdigit(str[i]))
 	{
-		res = res * 10 + (str[i] - '0');
+		res *= 10;
+		res += ft_char_to_digit(str[i]);
 		++i;
 	}
 	return (res * sign);

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libc.h>
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(char *s1, char *s2, size_t n)
 {
 	size_t	j;
 	size_t	i;

@@ -6,25 +6,24 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:53:48 by mgouault          #+#    #+#             */
-/*   Updated: 2015/01/11 20:13:22 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/16 20:06:59 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
 static char	*ft_strempty(void)
 {
 	char *str;
 
-	str = (char *)malloc(1);
+	str = (char *)ft_memalloc(1);
 	if (!str)
 		return (NULL);
 	*str = 0;
 	return (str);
 }
 
-static int	ft_j_nb(char const *s)
+static int	ft_j_nb(char *s)
 {
 	int j;
 
@@ -34,7 +33,7 @@ static int	ft_j_nb(char const *s)
 	return (j);
 }
 
-static int	ft_i_nb(char const *s)
+static int	ft_i_nb(char *s)
 {
 	int i;
 
@@ -44,7 +43,7 @@ static int	ft_i_nb(char const *s)
 	return (i);
 }
 
-char		*ft_strtrim(char const *s)
+char		*ft_strtrim(char *s)
 {
 	char	*str;
 	int		i;
@@ -60,7 +59,7 @@ char		*ft_strtrim(char const *s)
 		str = ft_strempty();
 	if ((j < i) && str)
 		return (str);
-	str = (char *)malloc(sizeof(char) * (j - i) + 1);
+	str = (char *)ft_memalloc(sizeof(char) * (j - i) + 1);
 	if (!str)
 		return (NULL);
 	while (s[i] && i <= j)

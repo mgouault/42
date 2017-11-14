@@ -6,11 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:04:48 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:32 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/17 13:40:55 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strequ(char const *s1, char const *s2)
+#include <libc.h>
+
+t_bool	ft_strequ(char *s1, char *s2)
 {
 	int i;
 
@@ -18,6 +20,6 @@ int ft_strequ(char const *s1, char const *s2)
 	while ((s1 && s2) && (s1[i] && s2[i]) && (s1[i] == s2[i]))
 		++i;
 	if ((s1 && s2) && (!s1[i] && !s2[i]))
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }

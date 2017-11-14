@@ -6,14 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:53:38 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:43 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/22 20:28:46 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include <libc.h>
 
-char *ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strsub(char *s, unsigned int start, size_t len)
 {
 	char			*str;
 	unsigned int	i;
@@ -21,8 +20,9 @@ char *ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	str = (char *)malloc(len * sizeof(char) + 1);
-	if (!str)
+	if (len == 0)
+		return (ft_strdup(""));
+	if (!(str = (char *)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (s[start] && (i < len))
 	{

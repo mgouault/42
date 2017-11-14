@@ -6,34 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:53:55 by mgouault          #+#    #+#             */
-/*   Updated: 2015/03/21 20:16:27 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/21 20:11:59 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
-static int	ft_strcnt(char const *s, char c)
-{
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (s[i] && s[i] != c)
-		{
-			++j;
-			while (s[i] && s[i] != c)
-				++i;
-		}
-		++i;
-	}
-	return (j);
-}
-
-char		**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char *s, char c)
 {
 	char	**str;
 	int		i;
@@ -41,23 +20,23 @@ char		**ft_strsplit(char const *s, char c)
 	int		p;
 
 	i = 0;
-	p = 0;
-	if (!s || !c)
-		return (NULL);
-	str = (char **)malloc(sizeof(char *) * (ft_strcnt(s, c) + 1));
-	if (!str)
+	p = -1;
+	if (!s || !c || !(str = (char **)ft_memalloc(sizeof(char *) * \
+		(ft_strcnt(s, c) + 1))))
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
-			++i;
-		j = i;
-		while (s[j] && s[j] != c)
-			++j;
-		if (i < j)
-			str[p++] = ft_strsub(s, i, j - i);
-		i = j;
+		if (s[i] != c)
+		{
+			j = i;
+			while (s[j] && s[j] != c)
+				j++;
+			str[++p] = ft_strsub(s, i, j - i);
+			i = j;
+		}
+		if (s[i])
+			i++;
 	}
-	str[p] = 0;
+	str[++p] = NULL;
 	return (str);
 }

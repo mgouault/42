@@ -6,20 +6,22 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:51:25 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/14 17:25:10 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/16 20:50:13 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
-void *ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
-	void *s;
+	void *ptr;
 
-	s = malloc(size);
-	if (!s)
-		return (NULL);
-	s = ft_memset(s, 0, size);
-	return (s);
+	ptr = malloc(size);
+	if (!ptr)
+	{
+		ft_putendl_fd("malloc error", 2);
+		exit(EXIT_FAILURE);
+	}
+	ptr = ft_memset(ptr, 0, size);
+	return (ptr);
 }

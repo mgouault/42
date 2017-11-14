@@ -6,13 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:56:45 by mgouault          #+#    #+#             */
-/*   Updated: 2015/03/17 19:10:55 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/15 21:19:35 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libc.h>
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{

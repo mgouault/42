@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <libft.h>
+#include <libc.h>
 
-void ft_putstr(char const *s)
+void	ft_putstr(char *s)
 {
 	if (s)
 		write(1, s, ft_strlen(s));

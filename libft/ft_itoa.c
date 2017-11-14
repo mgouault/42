@@ -6,12 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:54:01 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/16 15:21:22 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/16 20:08:16 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include <libc.h>
 
 static char	*ft_int_min(int n)
 {
@@ -19,7 +18,7 @@ static char	*ft_int_min(int n)
 	int		i;
 
 	i = 11;
-	res = (char *)malloc(sizeof(char) * 11 + 1);
+	res = (char *)ft_memalloc(sizeof(char) * 11 + 1);
 	if (!res)
 		return (NULL);
 	++n;
@@ -60,9 +59,9 @@ static char	*ft_allocnbstr(int n, int nbr_char)
 	char	*res;
 
 	if (n < 0)
-		res = (char *)malloc((nbr_char + 1) * sizeof(char) + 1);
+		res = (char *)ft_memalloc((nbr_char + 1) * sizeof(char) + 1);
 	else
-		res = (char *)malloc(nbr_char * sizeof(char) + 1);
+		res = (char *)ft_memalloc(nbr_char * sizeof(char) + 1);
 	if (!res)
 		return (NULL);
 	return (res);

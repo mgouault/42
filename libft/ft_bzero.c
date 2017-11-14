@@ -6,13 +6,13 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:18:03 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:13 by mgouault         ###   ########.fr       */
+/*   Updated: 2015/03/15 21:18:04 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libc.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char *str;
 
