@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:05:37 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:39 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:56:52 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libc.h>
 
 char *ft_strncpy(char *dst, const char *src, size_t n)
 {

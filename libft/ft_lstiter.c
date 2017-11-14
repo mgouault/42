@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 16:55:09 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/13 19:07:44 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:52:27 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libc.h>
 
 void ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {

@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:17:37 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:21 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:56:52 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libc.h>
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {

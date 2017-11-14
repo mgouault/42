@@ -6,12 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:51:07 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:31 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:53:01 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include <libc.h>
 
 void ft_strdel(char **as)
 {

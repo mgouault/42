@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 16:55:09 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/13 18:51:11 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:52:19 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libc.h>
 
 void ft_lstadd(t_list **alst, t_list *new)
 {

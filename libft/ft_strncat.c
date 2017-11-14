@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:05:19 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:37 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:56:52 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libc.h>
 
 char *ft_strncat(char *s1, const char *s2, size_t n)
 {

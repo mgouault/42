@@ -6,12 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:52:44 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:37 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:54:09 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

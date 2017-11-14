@@ -6,12 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:51:36 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:40 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:55:21 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
 char *ft_strnew(size_t size)
 {

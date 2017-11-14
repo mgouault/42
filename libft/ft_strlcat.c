@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:04:58 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:35 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:52:56 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <libc.h>
 
 size_t			ft_strlcat(char *dest, const char *src, size_t size)
 {

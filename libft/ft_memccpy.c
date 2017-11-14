@@ -6,11 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:17:26 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:20 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:56:52 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libc.h>
 
 void *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

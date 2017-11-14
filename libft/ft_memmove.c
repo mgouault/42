@@ -6,12 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:17:48 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/16 15:22:21 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:52:50 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {

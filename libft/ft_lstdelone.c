@@ -6,12 +6,11 @@
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 16:55:09 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/13 17:19:02 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:52:23 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include <libc.h>
 
 void ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
