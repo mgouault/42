@@ -1,51 +1,63 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_int_to_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:54:01 by mgouault          #+#    #+#             */
-/*   Updated: 2017/12/03 19:18:44 by mgouault         ###   ########.fr       */
+/*   Updated: 2017/12/03 19:41:31 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-static int	ft_count_char_for_int(int number) {
+static int	ft_count_char_for_int(int number)
+{
 	int	count;
 
 	count = 0;
-	if (number < 0) {
+	if (number < 0)
+	{
 		count++;
 		number *= -1;
 	}
-	while (number > 0) {
+	while (number > 0)
+	{
 		number /= 10;
 		count++;
 	}
 	return (count);
 }
 
-char		*ft_int_to_str(int n)
+static char	*ft_fill_str_with_int(char *res, int number)
 {
-	char	*res;
+	while (number > 0)
+	{
+		*res = ft_digit_to_char(number % 10);
+		number /= 10;
+		res--;
+	}
+}
+
+char		*ft_int_to_str(int number)
+{
+	char	*str;
 	int		i;
 
-	i = ft_count_char_for_int(n);
-	res = (char *)ft_malloc_str(i);
-	res[i] = NULL;
-	if (n < 0)
+	i = ft_count_char_for_int(number);
+	str = (char *)ft_malloc_str(i);
+	str += i - 1;
+	if (number == 0)
 	{
-		n = -n;
-		res[0] = '-';
+		str[0] = '0';
+		return (str);
 	}
-	if (n == 0)
-		res[0] = '0';
-	while (n > 0)
+	if (number < 0)
 	{
-		res[--i] = (n % 10) + '0';
-		n /= 10;
+		number *= -1;
+		str[0] = '-';
 	}
-	return (res);
+	ft_fill_str_with_int(str, number);
+	return (str);
 }
