@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 18:17:43 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/14 19:56:52 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/04 12:03:40 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:19:26 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+t_bool	ft_is_digit(char c)
 {
-	int		i;
-	char	*str1;
-	char	*str2;
-
-	str1 = (char*)dst;
-	str2 = (char*)src;
-	i = 0;
-	while (n > 0)
-	{
-		str1[i] = str2[i];
-		++i;
-		--n;
-	}
-	return (dst);
+	return (c >= '0' && c <= '9');
 }

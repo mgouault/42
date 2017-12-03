@@ -1,39 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 18:17:26 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/14 19:56:52 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/07 13:54:01 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:18:44 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void *ft_memccpy(void *dst, const void *src, int c, size_t n)
-{
-	int				i;
-	int				j;
-	unsigned char	*s1;
-	unsigned char	*s2;
+static int	ft_count_char_for_int(int number) {
+	int	count;
 
-	s1 = (unsigned char*)dst;
-	s2 = (unsigned char*)src;
-	i = 0;
-	j = 0;
+	count = 0;
+	if (number < 0) {
+		count++;
+		number *= -1;
+	}
+	while (number > 0) {
+		number /= 10;
+		count++;
+	}
+	return (count);
+}
+
+char		*ft_int_to_str(int n)
+{
+	char	*res;
+	int		i;
+
+	i = ft_count_char_for_int(n);
+	res = (char *)ft_malloc_str(i);
+	res[i] = NULL;
+	if (n < 0)
+	{
+		n = -n;
+		res[0] = '-';
+	}
+	if (n == 0)
+		res[0] = '0';
 	while (n > 0)
 	{
-		s1[i] = s2[j];
-		if (s2[j] == (unsigned char)c)
-		{
-			++i;
-			return (&s1[i]);
-		}
-		++i;
-		++j;
-		--n;
+		res[--i] = (n % 10) + '0';
+		n /= 10;
 	}
-	return (NULL);
+	return (res);
 }

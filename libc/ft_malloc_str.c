@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_mallocstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/12 16:55:09 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/14 19:52:15 by mgouault         ###   ########.fr       */
+/*   Created: 2017/12/03 19:02:37 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:19:47 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+char	*ft_malloc_str(int size)
 {
-	t_list *tmp;
-	t_list *next_tmp;
+	char	*res;
 
-	if (alst && *alst)
-	{
-		tmp = alst[0];
-		while (tmp)
-		{
-			if (tmp->content && tmp->content_size && (*del))
-				del(tmp->content, tmp->content_size);
-			next_tmp = tmp->next;
-			free(tmp);
-			tmp = next_tmp;
-		}
-		alst[0] = NULL;
-	}
+	res = (char *)malloc((size_t)(size * sizeof(char) + 1));
+	if (!res)
+		exit(EXIT_FAILURE);
+	return (res);
 }

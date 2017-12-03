@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/12 16:55:09 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/14 19:52:23 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/04 12:02:26 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:19:01 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+int		ft_str_to_int(char *str)
 {
-	if (alst && *alst)
+	static char	whitespace[7] = " \f\r\v\n\t";
+	int			i;
+	int			res;
+	int			sign;
+
+	i = 0;
+	while (str[i] && ft_char_in_str(whitespace, str[i]))
+		++i;
+	sign = 1;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '-' || str[i] == '+')
+		++i;
+	res = 0;
+	while (str[i] && ft_is_digit(str[i]))
 	{
-		if (alst[0]->content && alst[0]->content_size && (*del))
-			del(alst[0]->content, alst[0]->content_size);
-		free(alst[0]);
-		alst[0] = NULL;
+		res *= 10;
+		res += ft_char_to_digit(str[i]);
+		++i;
 	}
+	return (res * sign);
 }

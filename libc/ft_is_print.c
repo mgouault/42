@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/12 16:55:09 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/14 19:52:38 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/04 12:03:47 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:19:37 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_bool	ft_is_print(char c)
 {
-	t_list *new;
-
-	if (!lst || !f)
-		return (NULL);
-	new = f(lst);
-	new->next = ft_lstmap(lst->next, f);
-	return (new);
+	return (c >= 32 && c <= 126);
 }

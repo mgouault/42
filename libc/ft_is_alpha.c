@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 18:17:48 by mgouault          #+#    #+#             */
-/*   Updated: 2017/11/14 19:52:50 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/04 12:03:29 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:19:22 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+t_bool	ft_is_alpha(char c)
 {
-	int		i;
-	int		j;
-	char	*tmp;
-	char	*str1;
-	char	*str2;
-
-	str1 = (char*)dst;
-	str2 = (char*)src;
-	i = 0;
-	j = -1;
-	tmp = malloc(ft_strlen(src) * sizeof(char) + 1);
-	if (!tmp)
-		return (NULL);
-	while (++j < (int)len)
-		tmp[j] = str2[j];
-	tmp[j] = 0;
-	while (len > 0)
-	{
-		str1[i] = tmp[i];
-		++i;
-		--len;
-	}
-	return (dst);
+	return (ft_is_uppercase(c) || ft_is_lowercase(c));
 }
