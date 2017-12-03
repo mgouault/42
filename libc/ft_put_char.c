@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/03 17:13:00 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/12 21:38:27 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/03 17:00:55 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 19:43:57 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void	ft_putstr(char *s)
+void	ft_putchar(char c)
 {
-	if (s)
-		write(1, s, ft_strlen(s));
+	ft_putchar_fd(c, 1);
 }

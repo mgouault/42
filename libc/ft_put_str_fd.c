@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgouault <mgouault@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 15:39:04 by mgouault          #+#    #+#             */
-/*   Updated: 2014/11/15 20:33:06 by mgouault         ###   ########.fr       */
+/*   Created: 2014/11/06 15:38:55 by mgouault          #+#    #+#             */
+/*   Updated: 2017/12/03 20:01:46 by mgouault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libc.h>
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
-	}
-	else
-	{
-		if (n < 0)
-		{
-			n = -n;
-			ft_putchar_fd('-', fd);
-		}
-		if (n / 10 != 0)
-		{
-			ft_putnbr_fd((n / 10), fd);
-		}
-		ft_putchar_fd(((n % 10) + '0'), fd);
-	}
+	if (s)
+		write(fd, s, ft_str_len(s));
 }
